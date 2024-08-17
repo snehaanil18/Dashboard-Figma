@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="sidenav">
+      <div class="dash">
+        <div class="dashboard">
+          <div class="logo">
+            <img src="./Images/logo.svg" alt="" />
+            <h1>E-Dashboard</h1>
+          </div>
+          <div class="menu-open">
+            <button id="menu-button" onclick="openNav()">
+              <img src="./Images/menu_open.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div id="desktop-nav">
+          <div class="company-detail">
+            <span id="letter">A</span>
+            <select name="" id="">
+              <option value="">Alphalinx inc.</option>
+            </select>
+          </div>
+          <div class="menu-list">
+            <div class="company-menu">
+              <ul type="none">
+                <li>
+                  <button>
+                    <img src="./Images/dashboard.svg" alt="" />Dashboard
+                  </button>
+                </li>
+                <li>
+                  <div class="buissness-select">
+                    <img id="buissness-icon" src="./Images/buissness.svg" alt="" />
+                    <select name="" id="">
+                      <option value="">My Business</option>
+                    </select>
+                  </div>
+                </li>
+                <li>
+                  <div class="financial-select">
+                    <img id="financial-icon" src="./Images/request_quote.svg" alt="" />
+                    <select name="" id="">
+                      <option value="">Financial Resources</option>
+                    </select>
+                  </div>
+                </li>
+                <li>
+                  <button>
+                    <img src="./Images/mailbox.svg" alt="" />Mailbox
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <img src="./Images/visa.svg" alt="" />Visa Center
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <img src="./Images/compilance.svg" alt="" />Compliance <span id="nav-number">02</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- dashend -->
+      <div class="user-details">
+        <ul type="none">
+          <li>
+            <button>
+              <img src="./Images/notifications.svg" alt="" />Notifications
+            </button>
+          </li>
+
+          <li>
+            <button id="expand">
+              <img src="./Images/help.svg" alt="" />Help Center
+              <img id="expand-icon" src="./Images/expand_more.svg" alt="" />
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <span id="letter-end">J</span>
+              <div class="loggedin-user">
+                <p>Jacobe James</p>
+                <p id="email-user">Jacobejames@gmail.com</p>
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="greeting">
+      <div class="greeting-part">
+        <h1>Good morning, <span id="users-name">Emily!</span> &nbsp; 👋</h1>
+        <div id="welcome-msg">Welcome back!</div>
+      </div>
+
+      <div class="document-status-container">
+        <div class="document-status">
+          <img id="document-icon" src="./Images/document.svg" alt="" />
+          <h3>
+            All your <span id="document">documents</span> are <br />
+            <span id="status">up to date!</span>
+          </h3>
+          <img id="star-icon" src="./Images/star.svg" alt="" />
+        </div>
+
+        <p class="line"></p>
+        <div class="updates">
+          <p>You have 3 upcoming document updates in January.</p>
+          <button><img src="./Images/next.svg" alt="" /></button>
+        </div>
+      </div>
+
+      <!-- donut pie chart -->
+      <div class="donut-piechart">
+        <div id="doughnut-chart-text">
+          <span id="number">21</span> <br />
+          Applications
+        </div>
+        <canvas height="156px" width="157px" id="myDonutChart"></canvas>
+      </div>
+
+      <!-- mailbox -->
+      <div class="mailbox">
+        <div class="row">
+          <div class="section-name">
+            <h2>Mailbox</h2>
+            <a href="">view all</a>
+          </div>
+          <p>Check on your all your mail in one go.</p>
+          <div class="mail-status">
+            <div class="status">
+              <img src="./Images/tick-icon.svg" alt="" />
+              <div class="status-name">New</div>
+              <div class="number-mail">23</div>
+            </div>
+
+            <div class="status">
+              <img src="./Images/requested.svg" alt="" />
+              <div class="status-name">Requested</div>
+              <div class="number-mail">23</div>
+            </div>
+
+            <div class="status">
+              <img src="./Images/actions.svg" alt="" />
+              <div class="status-name">Actions taken</div>
+              <div class="number-mail">23</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="section-name">
+            <h2>Legal compliance</h2>
+            <a href="">view all</a>
+          </div>
+          <p>Keep your requirements up to date.</p>
+          <div class="mail-status">
+            <div class="status">
+              <img src="./Images/tick-icon.svg" alt="" />
+              <div class="status-name">Reminders</div>
+              <div class="number-mail">23</div>
+            </div>
+
+            <div class="status">
+              <img src="./Images/requested.svg" alt="" />
+              <div class="status-name">In progress</div>
+              <div class="number-mail">23</div>
+            </div>
+
+            <div class="status">
+              <img src="./Images/actions.svg" alt="" />
+              <div class="status-name">To approve</div>
+              <div class="number-mail">23</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="tasks">
+      <!-- task table -->
+      <div class="section-name">
+        <h2>Tasks</h2>
+        <a href="">view all</a>
+      </div>
+
+      <div class="task-labels">
+        <button>My tasks</button>
+        <button>Overdue</button>
+        <button>Assigned by me</button>
+      </div>
+
+      <div class="mytasks-table">
+        <table id="mytasks">
+          <tr>
+            <th>Task</th>
+            <th>Category</th>
+            <th>Due date</th>
+            <th>Status</th>
+          </tr>
+          <!-- row 1 -->
+          <tr>
+            <td>Update Tax Document for Alphalinx...</td>
+            <td>Compliance</td>
+            <td>23/11/23</td>
+            <td>
+              <button>Request sent</button>
+            </td>
+          </tr>
+
+          <!-- row 2 -->
+          <tr>
+            <td>Update KYC document</td>
+            <td>Compliance</td>
+            <td>23/11/23</td>
+            <td>
+              <button>Request sent</button>
+            </td>
+          </tr>
+          <!-- row 3 -->
+          <tr>
+            <td>Add clearer photo for visa application</td>
+            <td>Visa center</td>
+            <td>23/11/23</td>
+            <td>
+              <button>Pending action</button>
+            </td>
+          </tr>
+          <!-- row 4 -->
+          <tr>
+            <td>Document not clear: please add new file</td>
+            <td>Visa center</td>
+            <td>23/11/23</td>
+            <td>
+              <button>Pending action</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="payment-history">
+        <div class="section-name">
+          <h2>Payment history</h2>
+          <a href="">view all</a>
+        </div>
+        <div class="payment-table">
+          <table id="payhistory">
+            <tr>
+              <th>Transaction ID</th>
+              <th>Date of transaction</th>
+              <th>Amount</th>
+              <th>Description</th>
+            </tr>
+            <!-- row 1 -->
+            <tr>
+              <td id="transaction-id">#764657758</td>
+              <td>23/01/19</td>
+              <td>
+                $5.99
+                <button class="toggle-description">&#9662;</button>
+              </td>
+              <td class="description">Mailbox</td>
+            </tr>
+            <!-- row 2 -->
+            <tr>
+              <td class="transaction-id">#764657758</td>
+              <td>22/01/19</td>
+              <td>
+                $99
+                <button class="toggle-description">&#9662;</button>
+              </td>
+              <td class="description">Registration (upgrade)</td>
+            </tr>
+            <!-- row 3 -->
+            <tr>
+              <td class="transaction-id">#764657758</td>
+              <td>21/01/19</td>
+              <td>
+                $5.99
+                <button class="toggle-description">&#9662;</button>
+              </td>
+              <td class="description">Mailbox</td>
+            </tr>
+            <!-- row 4 -->
+            <tr>
+              <td class="transaction-id">#764657758</td>
+              <td>19/01/19</td>
+              <td>
+                $5.99
+                <button class="toggle-description">&#9662;</button>
+              </td>
+              <td class="description">Mailbox</td>
+            </tr>
+            <!-- row 5 -->
+            <tr>
+              <td class="transaction-id">#764657758</td>
+              <td>09/01/19</td>
+              <td>
+                $5.99
+                <button class="toggle-description">&#9662;</button>
+              </td>
+              <td class="description">Mailbox</td>
+            </tr>
+            <!-- row 6 -->
+            <tr>
+              <td class="transaction-id">#764657758</td>
+              <td>23/12/18</td>
+              <td>
+                $5.99
+                <button class="toggle-description">&#9662;</button>
+              </td>
+              <td class="description">Mailbox</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //display navbar menu in phone view
+    function openNav() {
+      let navbar = document.getElementById("desktop-nav");
+      if (navbar.style.display == "none" || navbar.style.display == "") {
+        navbar.style.display = "block";
+      } else {
+        navbar.style.display = "none";
+      }
+    }
+
+    //code to create a donut pie chart
+    const chart = document.getElementById("myDonutChart").getContext("2d");
+
+    const myDonutChart = new Chart(chart, {
+      type: "doughnut",
+      data: {
+        labels: ["Incomplete", "Pending approval", "Approved"],
+        datasets: [
+          {
+            label: "My Donut Chart",
+            data: [60, 21, 19],
+            backgroundColor: [
+              // Background colors for each segment
+              "rgba(243, 177, 125, 1)",
+              "rgba(91, 185, 145, 1)",
+              "rgba(231, 125, 118, 1)",
+            ],
+            borderWidth: 0,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: "70%",
+        plugins: {
+          legend: {
+            position: "right",
+            labels: {
+              color: "white", // Change the color of the labels
+              font: {
+                size: 12, // Change the font size of the labels
+              },
+              usePointStyle: true, // Use circles instead of rectangles for the legend icons
+              pointStyle: "circle",
+              pointRadius: 5,
+            },
+          },
+        },
+      },
+    });
+
+    // Select all toggle buttons
+    const toggleButtons = document.querySelectorAll(".toggle-description");
+
+    toggleButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Toggle the display of the description cell
+        const description = this.closest('tr').querySelector('.description');
+        if (description.style.display === 'none' || description.style.display === '') {
+            description.style.display = 'block';
+            this.innerHTML = '&#9652;'; // Change to up arrow (▲)
+        } else {
+            description.style.display = 'none';
+            this.innerHTML = '&#9662;'; // Change to down arrow (▼)
+        }
+    });
+});
+  </script>
+</body>
+
+</html>
