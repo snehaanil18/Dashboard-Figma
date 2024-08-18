@@ -108,6 +108,8 @@
     color: white;
     background: transparent;
     border: none;
+    appearance: none;
+    margin-left: 3px;
 }
 
 .menu-list li button img {
@@ -126,6 +128,7 @@
     left: 10px;
     height: 17px;
     width: 17px;
+   
 }
 
 .financial-select {
