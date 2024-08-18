@@ -18,7 +18,6 @@
     width: 300px;
     padding: 20px 30px;
     color: white;
-    /* height: 100vh; */
     position: relative;
     gap: 20px;
     display: flex;
@@ -781,11 +780,10 @@ tr {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
-        /* align-items: flex-end; */
         justify-content: end;
     }
 
-    /* Ensure the fourth column (if any) aligns below the third */
+   
     #payhistory td:nth-of-type(4) {
         
         width: 100%;

@@ -12,6 +12,7 @@
 
 <body>
   <div class="main">
+    <!-- side navbar  -->
     <div class="sidenav">
       <div class="dash">
         <div class="dashboard">
@@ -104,12 +105,15 @@
         </ul>
       </div>
     </div>
+
+    <!-- greetings part -->
     <div class="greeting">
       <div class="greeting-part">
         <h1>Good morning, <span id="users-name">Emily!</span> &nbsp; 👋</h1>
         <div id="welcome-msg">Welcome back!</div>
       </div>
 
+      <!-- updates -->
       <div class="document-status-container">
         <div class="document-status">
           <img id="document-icon" src="./Images/document.svg" alt="" />
@@ -165,6 +169,7 @@
           </div>
         </div>
 
+        <!-- legal compilance -->
         <div class="row">
           <div class="section-name">
             <h2>Legal compliance</h2>
@@ -260,6 +265,7 @@
           <h2>Payment history</h2>
           <a href="">view all</a>
         </div>
+        <!-- payment table -->
         <div class="payment-table">
           <table id="payhistory">
             <tr>
@@ -396,10 +402,10 @@
         const description = this.closest('tr').querySelector('.description');
         if (description.style.display === 'none' || description.style.display === '') {
             description.style.display = 'block';
-            this.innerHTML = '&#9652;'; // Change to up arrow (▲)
+            this.innerHTML = '&#9652;'; // Change to up arrow 
         } else {
             description.style.display = 'none';
-            this.innerHTML = '&#9662;'; // Change to down arrow (▼)
+            this.innerHTML = '&#9662;'; // Change to down arrow 
         }
     });
 });
